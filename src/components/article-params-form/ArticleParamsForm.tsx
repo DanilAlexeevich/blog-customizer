@@ -32,18 +32,21 @@ export const ArticleParamsForm = ({
 		setFormState(currentState);
 	}, [currentState]);
 
+	//применение
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 		onApply(formState);
 		setIsOpen(false);
 	};
 
+	//сброс
 	const handleFormReset = (e: React.FormEvent) => {
 		e.preventDefault();
 		setFormState(defaultArticleState);
 		onReset();
 	};
 
+	//закрытие формы по клику вне
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			if (
