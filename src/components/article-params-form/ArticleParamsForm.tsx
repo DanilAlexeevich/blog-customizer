@@ -18,6 +18,7 @@ import { Separator } from 'src/ui/separator';
 import { Text } from 'src/ui/text';
 import { ArrowButton } from 'src/ui/arrow-button';
 import { Button } from 'src/ui/button';
+import clsx from 'clsx';
 
 export const ArticleParamsForm = ({
 	currentState,
@@ -72,9 +73,7 @@ export const ArticleParamsForm = ({
 				data-arrow-button
 			/>
 			<aside
-				className={`${styles.container} ${
-					isOpen ? styles.container_open : ''
-				}`}>
+				className={clsx(styles.container, isOpen && styles.container_open)}>
 				<form
 					className={styles.form}
 					ref={formRef}
