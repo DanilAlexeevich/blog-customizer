@@ -176,4 +176,10 @@ export const defaultArticleState = {
 	fontSizeOption: fontSizeOptions[0],
 };
 
+export type ArticleParamsFormProps = {
+	currentState: ArticleStateType;
+	onApply: (state: ArticleStateType) => void;
+	onReset: () => void;
+};
+
 export type ArticleStateType = typeof defaultArticleState;
